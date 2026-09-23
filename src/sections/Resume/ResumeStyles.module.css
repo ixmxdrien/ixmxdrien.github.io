@@ -1,0 +1,170 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: min(900px, 100vw - 32px);
+  padding: 20px 0;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.back {
+  font-family: 'Roboto Mono', monospace;
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.back:hover {
+  text-decoration: underline;
+}
+
+.colorMode {
+  width: 25px;
+  cursor: pointer;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about {
+  max-width: 60ch;
+}
+
+.sectionTitle {
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+  border-bottom: 2px solid var(--btn-color);
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  border-left: 2px solid var(--btn-color);
+  padding-left: 20px !important;
+}
+
+.timelineItem {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.timelineItem::before {
+  content: '';
+  position: absolute;
+  left: -27px;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--btn-color);
+}
+
+.itemHeader {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 4px 16px;
+}
+
+.period {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+  color: var(--footer-text-color);
+}
+
+.subtitle {
+  font-style: italic;
+  font-size: 16px;
+}
+
+.itemText {
+  font-size: 15px;
+  color: var(--form-text-color);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 16px;
+  border: 1px solid var(--footer-text-color);
+  border-radius: 12px;
+
+  a {
+    color: var(--text-color);
+  }
+}
+
+.toolGroups {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 24px;
+
+  h3 {
+    margin-bottom: 12px;
+  }
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 14px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  background-color: var(--btn-color);
+  color: var(--btn-text-color);
+}
+
+.languages {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+@media (width >= 800px) {
+  .container {
+    gap: 70px;
+    padding-top: 40px;
+
+    h3 {
+      font-size: 20px;
+    }
+  }
+
+  .itemText {
+    font-size: 16px;
+  }
+}

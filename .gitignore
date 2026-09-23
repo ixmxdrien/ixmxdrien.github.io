@@ -1,0 +1,13 @@
+# Dependencies
+node_modules
+
+# Build output (deployed to the gh-pages branch by `npm run deploy`)
+dist
+
+# Environment files
+.env
+.env.*
+
+# Logs & OS files
+*.log
+.DS_Store
